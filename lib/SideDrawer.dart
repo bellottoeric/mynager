@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './screens/Dashboard.dart';
 import './screens/CryptoScreen.dart';
+import 'package:provider/provider.dart';
+import '../firebase/authentication_service.dart';
 
 class SideDrawer extends StatelessWidget {
   @override
@@ -45,6 +47,13 @@ class SideDrawer extends StatelessWidget {
                   transitionDuration: Duration(seconds: 0),
                 ),
               )
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.shopping_cart),
+            title: Text('Disconnection'),
+            onTap: () {
+              context.read<AuthenticationService>().signOut();
             },
           ),
         ],

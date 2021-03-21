@@ -7,7 +7,7 @@ import 'package:dio/dio.dart';
 class CryptoScreen extends StatefulWidget {
   static const route = "/crypto";
 
-  const CryptoScreen() : super();
+  const CryptoScreen({Key key}) : super(key: key);
 
   @override
   CryptoScreenState createState() => CryptoScreenState();
